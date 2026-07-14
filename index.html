@@ -1171,6 +1171,120 @@
         width: 78%;
       }
     }
+  
+    /* PORTADA MINIMALISTA MESA DE CONTROL */
+
+    .hero {
+      min-height: 720px;
+    }
+
+    .hero-grid {
+      min-height: 642px;
+      grid-template-columns: minmax(0, 1.18fr) minmax(300px, 0.82fr);
+      gap: 80px;
+    }
+
+    .hero-copy {
+      max-width: 780px;
+    }
+
+    .hero h1 {
+      max-width: 820px;
+      font-size: clamp(3.8rem, 7.3vw, 7.2rem);
+      line-height: 0.88;
+    }
+
+    .hero h1 span {
+      margin-top: 7px;
+    }
+
+    .hero-description {
+      max-width: 680px;
+      font-size: 1.05rem;
+    }
+
+    .hero-art-simple {
+      min-height: 430px;
+      display: grid;
+      place-items: center;
+    }
+
+    .hero-logo-card {
+      width: min(100%, 390px);
+      min-height: 390px;
+      padding: 54px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 29px;
+      background: #ffffff;
+      box-shadow: 0 36px 100px rgba(0,0,0,.35);
+    }
+
+    .hero-logo-simple {
+      width: min(100%, 245px);
+      filter: none;
+    }
+
+    .hero-logo-card span {
+      color: #050505;
+      font-size: .75rem;
+      font-weight: 850;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    .hero-meta,
+    .hero-ring,
+    .hero-code,
+    .hero-line {
+      display: none !important;
+    }
+
+    @media (max-width: 1020px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .hero-art-simple {
+        min-height: 400px;
+      }
+
+      .hero-logo-card {
+        min-height: 350px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-grid {
+        min-height: auto;
+        padding-bottom: 55px;
+      }
+
+      .hero h1 {
+        font-size: clamp(3.2rem, 16vw, 4.9rem);
+      }
+
+      .hero-logo-card {
+        width: min(100%, 330px);
+        min-height: 310px;
+        padding: 38px;
+        border-radius: 30px;
+      }
+
+      .hero-logo-simple {
+        width: 200px;
+      }
+    }
+
   </style>
 </head>
 
@@ -1184,7 +1298,7 @@
 
         <span class="brand-copy">
           <strong>BETTER · INVEX</strong>
-          <span>Centro de recursos</span>
+          <span>MESA DE CONTROL</span>
         </span>
       </a>
 
@@ -1193,10 +1307,9 @@
       </button>
 
       <nav class="nav-links" id="navLinks">
-        <a href="#inicio">Inicio</a>
-        <a href="#recursos">Recursos</a>
-        <a href="#identidad">Better</a>
-        <a href="#soporte" class="nav-action">Soporte</a>
+        <a href="#inicio">INICIO</a>
+        <a href="#recursos">RECURSOS</a>
+        <a href="#soporte" class="nav-action">SOPORTE</a>
       </nav>
 
     </div>
@@ -1208,83 +1321,37 @@
       <div class="container hero-grid">
 
         <div class="hero-copy">
-          <span class="eyebrow">Better · Invex</span>
+          <span class="eyebrow">BETTER · INVEX · MESA DE CONTROL</span>
 
           <h1>
-            Hacerlo
-            <span>mejor.</span>
+            HAGAMOS QUE LAS
+            <span>COSAS SUCEDAN.</span>
           </h1>
 
           <p class="hero-description">
-            Un espacio central para consultar procesos, manuales, postales,
-            formatos y herramientas operativas de forma clara, rápida y visual.
+            Este es un espacio donde se concentran recursos, información
+            importante, anuncios y dinámicas en un solo lugar. También te
+            conecta con el equipo de Mesa de Control para cualquier duda :)
           </p>
 
           <div class="hero-actions">
             <a href="#recursos" class="button button-white">
-              Explorar recursos
+              EXPLORA RECURSOS
               <span>↘</span>
             </a>
 
-            <a
-              href="como-hacer-un-tramite.html"
-              class="button button-outline-light"
-              target="_blank"
-              rel="noopener"
-            >
-              Manual aprobado
-              <span>↗</span>
+            <a href="#soporte" class="button button-outline-light">
+              ÁREA DE MESA DE CONTROL
+              <span>→</span>
             </a>
           </div>
+        </div>
 
-          <div class="hero-meta">
-            <div>
-              <strong>38</strong>
-              <span>Pasos MAAT</span>
-            </div>
-
-            <div>
-              <strong>100%</strong>
-              <span>Visual</span>
-            </div>
-
-            <div>
-              <strong>24/7</strong>
-              <span>Disponible</span>
-            </div>
+        <div class="hero-art hero-art-simple" aria-hidden="true">
+          <div class="hero-logo-card">
+            <img class="hero-logo-simple" src="assets/logo-better.png" alt="">
+            <span>MESA DE CONTROL</span>
           </div>
-        </div>
-
-        <div class="hero-art" aria-hidden="true">
-          <span class="hero-code">B / INVEX / 2026</span>
-          <span class="hero-ring"></span>
-          <img class="hero-logo" src="assets/logo-better.png" alt="">
-          <span class="hero-line"></span>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section intro">
-      <div class="container intro-grid">
-
-        <div>
-          <span class="eyebrow">Centro operativo</span>
-          <h2 class="intro-title">Todo en un solo lugar.</h2>
-        </div>
-
-        <div class="intro-copy">
-          <p>
-            <strong>Consulta sin perder tiempo.</strong> Los materiales están
-            organizados por tipo para que el equipo encuentre rápidamente la
-            información que necesita.
-          </p>
-
-          <p>
-            <strong>Diseñado para ser práctico.</strong> La página funciona en
-            computadora, tableta y celular, sin instalaciones ni accesos
-            complicados.
-          </p>
         </div>
 
       </div>
@@ -1357,7 +1424,7 @@
                   rel="noopener"
                   class="button button-white"
                 >
-                  Abrir manual aprobado
+                  VER RECURSO
                   <span>↗</span>
                 </a>
 
@@ -1365,7 +1432,7 @@
                   href="como-hacer-un-tramite.html#page-01"
                   class="button button-outline-light"
                 >
-                  Comenzar paso 01
+                  COMENZAR PASO 01
                   <span>→</span>
                 </a>
               </div>
@@ -1456,13 +1523,13 @@
         <article class="support-card">
 
           <div class="support-copy">
-            <span class="eyebrow">Soporte Better</span>
+            <span class="eyebrow">Mesa de Control</span>
 
-            <h2>¿Necesitas ayuda?</h2>
+            <h2>Estamos para apoyarte.</h2>
 
             <p>
-              Coloca aquí el enlace real del grupo de soporte, formulario o
-              canal de atención para reportar incidencias y dar seguimiento.
+              Conecta directamente con el equipo de Mesa de Control para resolver
+              dudas, reportar incidencias y dar seguimiento a tus casos.
             </p>
           </div>
 
@@ -1473,7 +1540,7 @@
               rel="noopener"
               class="button button-black"
             >
-              Abrir soporte
+              ÁREA DE MESA DE CONTROL
               <span>↗</span>
             </a>
           </div>
