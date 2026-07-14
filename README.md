@@ -1,0 +1,25 @@
+# Better - Invex
+
+Centro de recursos interno para publicar postales, procesos, formatos, material de capacitación, comunicados y guías rápidas.
+
+## Estructura
+
+```text
+Better-Invex/
+├── index.html
+├── .nojekyll
+├── .gitignore
+├── README.md
+├── INSTRUCCIONES_GITHUB.md
+├── 1_CREAR_REPO_Y_SUBIR.bat
+├── 2_SUBIR_CAMBIOS.bat
+└── assets/
+    ├── postales/
+    └── documentos/
+```
+
+## Agregar recursos
+
+Dentro de `index.html`, busca `const resources = [` para editar títulos, categorías, fechas y descripciones.
+
+Guarda imágenes en `assets/postales/` y documentos en `assets/documentos/`.
