@@ -228,6 +228,115 @@ body.reading .page-dot{width:40px;height:40px;border-radius:13px;top:153px}
   }
 </style>
 
+
+<style id="better-logo-theme">
+  :root {
+    --red: #050505 !important;
+    --red-bright: #242424 !important;
+    --black: #050505 !important;
+    --ink: #111111 !important;
+    --muted: #696969 !important;
+    --paper: #ffffff !important;
+    --bg: #f3f3f1 !important;
+    --line: #dedede !important;
+  }
+
+  body {
+    background:
+      radial-gradient(circle at 92% 3%, rgba(0,0,0,.06), transparent 26rem),
+      linear-gradient(180deg,#fafafa 0,#f3f3f1 38rem) !important;
+  }
+
+  .scroll-progress,
+  .btn-red,
+  .back-top {
+    background: #050505 !important;
+    box-shadow: none !important;
+  }
+
+  .hero {
+    background:
+      radial-gradient(circle at 88% 20%, rgba(255,255,255,.07), transparent 24rem),
+      linear-gradient(126deg,#050505 0%,#111111 58%,#222222 100%) !important;
+  }
+
+  .hero::before {
+    background: radial-gradient(circle,rgba(255,255,255,.14),transparent 68%) !important;
+  }
+
+  .hero h1 span,
+  .step-label,
+  .current-chip b {
+    color: #111111 !important;
+  }
+
+  .hero h1 span {
+    color: #ffffff !important;
+    -webkit-text-stroke: 1px rgba(255,255,255,.7);
+  }
+
+  .manual-page.current .page-content {
+    border-color: rgba(0,0,0,.35) !important;
+  }
+
+  .manual-page.current .page-dot {
+    background: #050505 !important;
+  }
+
+  .search-wrap input:focus,
+  .controls select:focus {
+    border-color: #050505 !important;
+    box-shadow: 0 0 0 4px rgba(0,0,0,.08) !important;
+  }
+
+  .back-better {
+    background: #050505 !important;
+  }
+
+  .back-better:hover {
+    background: #252525 !important;
+  }
+
+  .brand img {
+    width: 44px !important;
+    height: 44px !important;
+    object-fit: contain !important;
+  }
+</style>
+
+<script id="better-logo-theme-script">
+  window.addEventListener("DOMContentLoaded", () => {
+    const brandImage = document.querySelector(".brand img");
+    if (brandImage) {
+      brandImage.src = "assets/logo-better.png";
+      brandImage.alt = "Better";
+    }
+
+    const brandText = document.querySelector(".brand strong");
+    if (brandText) {
+      brandText.textContent = "BETTER · INVEX";
+    }
+
+    const heroEyebrow = document.querySelector(".hero .eyebrow");
+    if (heroEyebrow) {
+      heroEyebrow.textContent = "MANUAL OFICIAL · PROCESO APROBADO";
+    }
+
+    const heroTitle = document.querySelector(".hero h1");
+    if (heroTitle) {
+      heroTitle.innerHTML = "TRÁMITE <span>APROBADO</span>";
+    }
+
+    const heroParagraph = document.querySelector(".hero p");
+    if (heroParagraph) {
+      heroParagraph.textContent =
+        "Consulta las 38 pantallas del proceso MAAT en un recorrido continuo, claro y adaptable a celular o computadora.";
+    }
+
+    document.title = "COMO HACER UN TRAMITE APROBADO · Better Invex";
+  });
+</script>
+
 </head>
 <body>
 <a class="back-better" href="index.html#tramite">← Volver a Better - Invex</a>
