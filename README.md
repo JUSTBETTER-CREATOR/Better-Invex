@@ -30,3 +30,16 @@ Guarda imágenes en `assets/postales/` y documentos en `assets/documentos/`.
 El archivo `como-hacer-un-tramite.html` contiene el manual interactivo
 de MAAT con 38 pasos. Está integrado en la página principal mediante
 una vista previa y también puede abrirse en una pestaña independiente.
+
+
+## Rediseño inspirado en el logo Better
+
+La página principal utiliza una identidad monocromática basada en el logo
+oficial: blanco, negro, líneas limpias, formas redondeadas y tipografía de alto
+contraste.
+
+El manual principal se muestra dentro de Recursos con el nombre:
+
+```text
+COMO HACER UN TRAMITE APROBADO
+```
