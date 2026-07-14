@@ -23,3 +23,10 @@ Better-Invex/
 Dentro de `index.html`, busca `const resources = [` para editar títulos, categorías, fechas y descripciones.
 
 Guarda imágenes en `assets/postales/` y documentos en `assets/documentos/`.
+
+
+## Manual: cómo hacer un trámite
+
+El archivo `como-hacer-un-tramite.html` contiene el manual interactivo
+de MAAT con 38 pasos. Está integrado en la página principal mediante
+una vista previa y también puede abrirse en una pestaña independiente.

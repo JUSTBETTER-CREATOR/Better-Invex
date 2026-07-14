@@ -1286,6 +1286,252 @@
         padding: 29px 21px;
       }
     }
+
+    /* =========================
+       CÓMO HACER UN TRÁMITE
+    ========================== */
+
+    .manual-section {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 92% 10%, rgba(82, 221, 209, 0.13), transparent 28%),
+        linear-gradient(180deg, #f6f8fc 0%, #eef3f9 100%);
+    }
+
+    .manual-section::before {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      left: -210px;
+      bottom: -180px;
+      border-radius: 50%;
+      background: rgba(47, 103, 246, 0.08);
+    }
+
+    .manual-heading {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 32px;
+      margin-bottom: 30px;
+    }
+
+    .manual-heading-copy {
+      max-width: 760px;
+    }
+
+    .manual-heading h2 {
+      margin-top: 10px;
+      color: var(--navy);
+      font-size: clamp(2.25rem, 4.6vw, 4rem);
+      line-height: 1;
+      letter-spacing: -0.06em;
+    }
+
+    .manual-heading p {
+      max-width: 690px;
+      margin-top: 15px;
+      color: var(--muted);
+      line-height: 1.72;
+    }
+
+    .manual-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .manual-open-button {
+      color: var(--white);
+      background: var(--navy);
+      box-shadow: 0 14px 32px rgba(7, 26, 51, 0.16);
+    }
+
+    .manual-secondary-button {
+      color: var(--navy);
+      border-color: var(--border);
+      background: var(--white);
+    }
+
+    .manual-shell {
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      border: 1px solid rgba(7, 26, 51, 0.1);
+      border-radius: 28px;
+      background: var(--white);
+      box-shadow: 0 30px 85px rgba(7, 26, 51, 0.14);
+    }
+
+    .manual-browser-bar {
+      min-height: 58px;
+      padding: 0 18px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(255, 255, 255, 0.96);
+    }
+
+    .browser-dots {
+      display: flex;
+      gap: 7px;
+      flex: 0 0 auto;
+    }
+
+    .browser-dots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #d9dee7;
+    }
+
+    .browser-dots span:first-child {
+      background: #ff8fa8;
+    }
+
+    .browser-dots span:nth-child(2) {
+      background: #ffd084;
+    }
+
+    .browser-dots span:last-child {
+      background: var(--mint);
+    }
+
+    .manual-browser-title {
+      min-width: 0;
+      flex: 1;
+      padding: 10px 15px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: #667085;
+      background: #f7f9fc;
+      font-size: 0.78rem;
+      font-weight: 750;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .manual-browser-link {
+      color: var(--blue);
+      font-size: 0.77rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .manual-frame-wrap {
+      min-height: 760px;
+      background: #f3f3f5;
+    }
+
+    .manual-frame {
+      display: block;
+      width: 100%;
+      height: 760px;
+      border: 0;
+      background: #f3f3f5;
+    }
+
+    .manual-features {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .manual-feature {
+      min-height: 105px;
+      padding: 19px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .manual-feature-icon {
+      width: 41px;
+      height: 41px;
+      flex: 0 0 auto;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      color: var(--navy);
+      background: var(--mint-soft);
+      font-weight: 900;
+    }
+
+    .manual-feature strong {
+      display: block;
+      color: var(--navy);
+      font-size: 0.9rem;
+    }
+
+    .manual-feature p {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .manual-heading {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .manual-actions {
+        justify-content: flex-start;
+      }
+
+      .manual-features {
+        grid-template-columns: 1fr;
+      }
+
+      .manual-frame,
+      .manual-frame-wrap {
+        height: 650px;
+        min-height: 650px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .manual-section {
+        padding-top: 72px;
+      }
+
+      .manual-heading h2 {
+        font-size: 2.65rem;
+      }
+
+      .manual-actions .button {
+        width: 100%;
+      }
+
+      .manual-browser-bar {
+        padding: 0 12px;
+      }
+
+      .manual-browser-link {
+        display: none;
+      }
+
+      .manual-frame,
+      .manual-frame-wrap {
+        height: 590px;
+        min-height: 590px;
+      }
+    }
+
   </style>
 </head>
 
@@ -1311,7 +1557,8 @@
       <nav id="navigation">
         <a href="#inicio">Inicio</a>
         <a href="#recursos">Recursos</a>
-        <a href="#proceso">Procesos</a>
+        <a href="#tramite">Cómo hacer un trámite</a>
+        <a href="#proceso">Soporte de errores</a>
         <a href="#soporte" class="nav-button">Soporte</a>
       </nav>
 
@@ -1347,8 +1594,8 @@
               <span>→</span>
             </a>
 
-            <a href="#proceso" class="button button-outline">
-              Ver proceso destacado
+            <a href="#tramite" class="button button-outline">
+              Cómo hacer un trámite
             </a>
           </div>
 
@@ -1439,15 +1686,15 @@
             </div>
           </a>
 
-          <a href="#proceso" class="quick-card">
+          <a href="#tramite" class="quick-card">
             <div class="quick-top">
               <span class="quick-icon">↻</span>
               <span class="quick-arrow">→</span>
             </div>
 
             <div>
-              <h3>Procesos</h3>
-              <p>Guías claras para cada actividad.</p>
+              <h3>Cómo hacer un trámite</h3>
+              <p>Recorrido visual completo de MAAT.</p>
             </div>
           </a>
 
@@ -1509,6 +1756,111 @@
         <div class="filters" id="filters"></div>
 
         <div class="resource-grid" id="resourceGrid"></div>
+
+      </div>
+    </section>
+
+
+    <!-- CÓMO HACER UN TRÁMITE -->
+    <section class="manual-section" id="tramite">
+      <div class="container">
+
+        <div class="manual-heading">
+
+          <div class="manual-heading-copy">
+            <span class="section-label">Manual interactivo MAAT</span>
+
+            <h2>Cómo hacer un trámite, paso a paso.</h2>
+
+            <p>
+              Consulta el recorrido completo del trámite en MAAT. El manual
+              incluye las 38 pantallas consecutivas, buscador, selector de
+              pasos, modo lectura y ampliación de imágenes.
+            </p>
+          </div>
+
+          <div class="manual-actions">
+            <a
+              href="como-hacer-un-tramite.html"
+              target="_blank"
+              rel="noopener"
+              class="button manual-open-button"
+            >
+              Abrir manual completo
+              <span>↗</span>
+            </a>
+
+            <a href="#proceso" class="button manual-secondary-button">
+              Ver soporte de errores
+            </a>
+          </div>
+
+        </div>
+
+        <div class="manual-shell">
+
+          <div class="manual-browser-bar">
+            <div class="browser-dots" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="manual-browser-title">
+              Better - Invex / Cómo hacer un trámite en MAAT
+            </div>
+
+            <a
+              class="manual-browser-link"
+              href="como-hacer-un-tramite.html"
+              target="_blank"
+              rel="noopener"
+            >
+              Pantalla completa ↗
+            </a>
+          </div>
+
+          <div class="manual-frame-wrap">
+            <iframe
+              class="manual-frame"
+              src="como-hacer-un-tramite.html#page-01"
+              title="Manual interactivo para hacer un trámite en MAAT"
+              loading="lazy"
+            ></iframe>
+          </div>
+
+        </div>
+
+        <div class="manual-features">
+
+          <article class="manual-feature">
+            <span class="manual-feature-icon">38</span>
+
+            <div>
+              <strong>Proceso completo</strong>
+              <p>Desde el acceso a MAAT hasta el cierre exitoso del trámite.</p>
+            </div>
+          </article>
+
+          <article class="manual-feature">
+            <span class="manual-feature-icon">⌕</span>
+
+            <div>
+              <strong>Buscador integrado</strong>
+              <p>Localiza rápidamente selfie, OTP, NIP, firma o activación.</p>
+            </div>
+          </article>
+
+          <article class="manual-feature">
+            <span class="manual-feature-icon">↗</span>
+
+            <div>
+              <strong>Imágenes ampliables</strong>
+              <p>Abre cada pantalla para revisar con mayor detalle las indicaciones.</p>
+            </div>
+          </article>
+
+        </div>
 
       </div>
     </section>
